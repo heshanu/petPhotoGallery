@@ -1,0 +1,27 @@
+<p class="text-center text-blue-500 bg-blue-200 text-3xl m-8 p-2">Cart</p>
+
+<div fxLayout="flex row" fxLayoutGap="50px grid">
+            <mat-card  *ngFor="let p of cartList" class="text-2xl example-card m-4 p-8 rounded-lg">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title class="text-white-500">{{p.name}}</mat-card-title>
+                  <mat-card-subtitle>{{p.price|currency:"$"}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src='../../../../assets/img.jpeg' alt="Photo of a Shiba Inu">
+            
+              </mat-card>   
+                
+</div>
+
+<div class="text-bold text-3xl m-4 p-2">
+  <span matListItemTitle>Total(USD)</span>  
+  <span matListItemLine>{{totalPrice|currency:'$'}}</span>    
+</div>
+<div class="w-full">
+  <mat-list-item class="text-right m-4">
+    <button mat-flat-button class="" (click)="clearCart()" color="warn">Clear</button>
+  </mat-list-item>
+  <mat-list-item class="text-left m-4">
+    <button mat-flat-button class="" (click)="checkOut()" color="accent">CheckOut</button>
+  </mat-list-item> 
+</div>
