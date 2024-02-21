@@ -31,10 +31,15 @@ export class ProductListComponent implements OnInit {
   sortLow:Product[]=[];
 
   public getProducts(){
-    this.productService.getProducts().subscribe((prod)=>{
-      this.productList=prod;
-      this.filteredProducts=prod
-    });
+
+    this.productService.Products
+    this.productList= this.productService.Products
+    this.filteredProducts= this.productService.Products
+
+    // this.productService.getProducts().subscribe((prod)=>{
+    //   this.productList=prod;
+    //   this.filteredProducts=prod
+    // });
       
   }
 
