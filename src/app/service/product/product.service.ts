@@ -10,6 +10,55 @@ import { Product } from '../../models/product';
 export class ProductService {
 
   apiUrl=environment.apiUrl+"/products";
+  Products:Product[]=[
+    {
+      "id":1,
+      "name":"dog",
+      "price":100,
+      "image_url":"product1.jpg"
+    },
+     {
+      "id":2,
+      "name":"cat",
+      "price":12,
+      "image_url":"product1.jpg"
+    },
+     {
+      "id":3,
+      "name":"crow",
+      "price":50,
+      "image_url":"product1.jpg"
+    }, {
+      "id":4,
+      "name":"bird",
+      "price":1000,
+      "image_url":"product1.jpg"
+    },
+     {
+      "id":5,
+      "name":"dog",
+      "price":100,
+      "image_url":"product1.jpg"
+    },
+     {
+      "id":6,
+      "name":"cat",
+      "price":12,
+      "image_url":"product1.jpg"
+    },
+     {
+      "id":7,
+      "name":"crow",
+      "price":50,
+      "image_url":"product1.jpg"
+    }, {
+      "id":8,
+      "name":"bird",
+      "price":1000,
+      "image_url":"product1.jpg"
+    }
+    
+  ]
 
   constructor(private http:HttpClient) { }
 
