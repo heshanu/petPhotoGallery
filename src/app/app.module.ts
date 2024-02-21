@@ -24,7 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSlideToggleModule,
     MaterialModule,
     HomeModule,
-    BrowserAnimationsModule 
+    BrowserAnimationsModule,
+   
   ],
   providers: [
     provideClientHydration()

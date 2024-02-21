@@ -5,7 +5,7 @@ import { ProductRoutingModule } from './product-routing.module';
 import { ProductListComponent } from './product-list/product-list.component';
 
 import { MaterialModule } from '../../material/material.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
     ProductRoutingModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+
   ],
   exports:[
     ProductListComponent
