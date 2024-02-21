@@ -22,10 +22,12 @@ export class ProductListComponent implements OnInit {
   }
 
   productList:Product[]=[];
+  filteredProducts:Product[]=[];
 
   public getProducts(){
     this.productService.getProducts().subscribe((prod)=>{
       this.productList=prod;
+      this.filteredProducts=prod
     });
    // console.log(this.productList);
   }
@@ -42,4 +44,14 @@ export class ProductListComponent implements OnInit {
     });
     
   }
+
+  public applyFilter(event:Event):void{
+    let searchTerm=(event.target as HTMLInputElement).value;
+    searchTerm=searchTerm.toLocaleLowerCase();
+
+    this.filteredProducts=this.productList.filter(
+      product=>product.name.toLocaleLowerCase().includes(searchTerm));
+
+  }
+
 }
