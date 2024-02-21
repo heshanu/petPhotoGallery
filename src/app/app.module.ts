@@ -9,6 +9,7 @@ import { CartModule } from './module/cart/cart.module';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MaterialModule } from './material/material.module';
 import { HomeModule } from './module/home/home.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HomeModule } from './module/home/home.module';
     HttpClientModule,
     MatSlideToggleModule,
     MaterialModule,
-    HomeModule
+    HomeModule,
+    BrowserAnimationsModule 
   ],
   providers: [
     provideClientHydration()

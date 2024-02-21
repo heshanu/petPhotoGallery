@@ -33,9 +33,13 @@ export class ProductListComponent implements OnInit {
   public addToCart(product:Product):void{
     this.cardViewService.addToCart(product).subscribe({
       next:()=>{
-          this.snackBar.open("Added to Cart");
+          this.snackBar.open("Added to Cart","",{
+            duration:2000,
+            horizontalPosition:'right',
+            verticalPosition:'top'
+          });
       }
     });
-
+    
   }
 }
