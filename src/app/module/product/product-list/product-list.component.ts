@@ -3,7 +3,6 @@ import { Product } from '../../../models/product';
 import { ProductService } from '../../../service/product/product.service';
 import { CartViewService } from '../../../service/cartView/cart-view.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { log } from 'console';
 
 @Component({
   selector: 'app-product-list',
