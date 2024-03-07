@@ -1,12 +1,24 @@
+
+<mat-form-field class="mt-8 p-2 bg-white-500">
+  <input matInput (keyup)="applyFilter($event)" placeholder="Search" />
+</mat-form-field>
+
+<mat-form-field class="mt-8 p-2 bg-white-500">
+  <mat-select (selectionChange)="sortProducts($event.value)" placeholder="Sort By Price">
+    <mat-option value="priceLowToHigh" class="text-white-500">Price-LowToHigh</mat-option>
+    <mat-option value="priceHighToLow" class="text-white-500">price-HighToLow</mat-option>
+  </mat-select>
+</mat-form-field>
+
 <p class="text-center text-blue-500 bg-blue-200 text-3xl m-8 p-2">Our Latest's Collection</p>
-<div fxLayout="flex row" fxLayoutGap="50px grid">
-            <mat-card  *ngFor="let p of productList" (click)="addToCart(p)" class="text-2xl example-card m-4 p-8 rounded-lg">
+<div fxLayout="flex row" fxLayoutGap="50px grid rounded-lg">
+            <mat-card  *ngFor="let p of filteredProducts" (click)="addToCart(p)" class="text-2xl example-card m-4 p-8 rounded-lg">
                 <mat-card-header>
                   <div mat-card-avatar class="example-header-image"></div>
                   <mat-card-title class="text-white-500">{{p.name}}</mat-card-title>
                   <mat-card-subtitle>{{p.price|currency:"$"}}</mat-card-subtitle>
                 </mat-card-header>
-                <img mat-card-image src='../../../../assets/img.jpeg' alt="Photo of a Shiba Inu">
+                <img mat-card-image src='../../../../assets/img.jpeg' class="m-2 p-2  rounded-lg" alt="Photo of a Shiba Inu">
                 <mat-card-content>
                   <p class="text-center text-white-500">
                     The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
@@ -19,6 +31,4 @@
                   <button mat-button>SHARE</button>
                 </mat-card-actions>
             </mat-card>          
-</div> 
-        
-
+</div>       
